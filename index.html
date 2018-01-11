@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>7 Minute Workout</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
 </head>
-<body>
-
-</body>
+    <body ng-controller="workoutController">
+        <div class="navbar navbar-default navbar-fixed-top top-navbar">
+            <div class="container app-container">
+                <div class="navbar-header">
+                    <h1>7 Minute Workout</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content app-container">
+            <pre>Current Exercise: {{currentExercise | json}}</pre>
+            <pre>Time Left: {{currentExercise.duration-currentExerciseDuration}}</pre>
+        </div>
+        <script src="lib/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/7MinWorkout/workout.js"></script>
+    </body>
 </html>
